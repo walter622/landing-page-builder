@@ -38,12 +38,12 @@ function LandingPage() {
   return (
     <div className="min-h-screen bg-background">
       {/* Cabeçalho */}
-      <header className="border-b border-border bg-ink">
-        <div className="mx-auto flex max-w-6xl items-center justify-center px-5 py-4">
+      <header className="border-b-2 border-brand bg-white">
+        <div className="mx-auto flex max-w-6xl items-center justify-center px-5 py-3">
           <img
             src={logoMarca.url}
             alt="A9 Máquinas Agrícolas — Concessionária Massey Ferguson"
-            className="h-10 w-auto sm:h-12"
+            className="h-12 w-auto sm:h-14"
           />
         </div>
       </header>
