@@ -43,7 +43,7 @@ function LandingPage() {
           <img
             src={logoMarca.url}
             alt="A9 Máquinas Agrícolas — Concessionária Massey Ferguson"
-            className="h-16 w-auto sm:h-20"
+            className="h-12 w-auto sm:h-16"
           />
         </div>
       </header>
