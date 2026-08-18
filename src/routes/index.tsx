@@ -43,7 +43,7 @@ function LandingPage() {
           <img
             src={logoMarca.url}
             alt="A9 Máquinas Agrícolas — Concessionária Massey Ferguson"
-            className="h-12 w-auto sm:h-16"
+            className="h-10 w-auto sm:h-12"
           />
         </div>
       </header>
@@ -128,7 +128,7 @@ function LandingPage() {
           <img
             src={logoMarca.url}
             alt="A9 Máquinas Agrícolas — Concessionária Massey Ferguson"
-            className="mx-auto h-16 w-auto"
+            className="mx-auto h-10 w-auto sm:h-12"
           />
           <p className="mt-6 text-xs leading-relaxed text-muted-foreground">
             *Valores sob consulta. *Frete não incluso. Condições válidas enquanto durar o estoque.
