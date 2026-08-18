@@ -139,6 +139,8 @@ function LandingPage() {
           </p>
         </div>
       </footer>
+
+      <WhatsappFlutuante />
     </div>
   );
 }
