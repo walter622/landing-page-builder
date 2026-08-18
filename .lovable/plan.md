@@ -1,29 +1,34 @@
 # Landing Page — Festival de Implementos A9
 
-## Objetivo
-Criar uma landing page de bloco único para qualificar leads vindos do Meta antes de direcioná-los ao WhatsApp. A página deve converter o visitante em clique no botão de conversa com um consultor, usando a oferta do Festival de Implementos A9 como gancho.
+Página de bloco único para qualificar o lead vindo do Meta antes de mandar para o WhatsApp. Objetivo: apresentar a campanha, mostrar as ofertas e converter em clique no botão de consultor.
+
+## Identidade visual (extraída dos criativos)
+
+- Preto profundo como base, com blocos brancos/claros para respiro — mesma lógica dos criativos.
+- Vermelho Massey (#D6001C aprox.) como cor de ação: botões, preço promocional, detalhes.
+- Dourado do logo da campanha como acento pontual (selos, "até 20% OFF").
+- Verde de destaque (usado em "GASTE MENOS") reservado para o reforço de economia.
+- Tipografia condensada/itálica pesada em caixa alta nas headlines e preços, replicando o tom dos criativos. Corpo de texto em sans neutra legível.
+- Cantos retos, faixas diagonais e traços de velocidade — nada de cards arredondados genéricos.
 
 ## Estrutura da página
 
 ### 1. Cabeçalho
-- Logo da marca: **A9 Máquinas Agrícolas | Concessionária Massey Ferguson**
-- Layout minimalista, fixo ou próximo ao topo, com fundo claro ou escuro conforme a identidade visual que for definida pelos criativos.
+Logo Massey Ferguson + A9 no topo (arquivo `massey-a9-preto.png`, versão apropriada ao fundo).
 
-### 2. Hero Section
-- **Headline principal:** "Seu próximo investimento no campo pode custar muito menos."
-- **Sub-headline:** "Aproveite o Festival de Implementos A9 com até 20% OFF e parcelamento em até 10x sem juros no cartão de crédito."
-- **Apelo comercial:** "A oportunidade que seu maquinário esperava chegou. Renove sua operação com inteligência, aumente a produtividade da sua fazenda e invista mais na lavoura pagando menos na estrutura."
-- **CTA primário:** botão de WhatsApp com ícone de chat e texto "QUERO FALAR COM UM CONSULTOR NO WHATSAPP".
+### 2. Hero
+- Logo da campanha "Festival de Implementos" em destaque.
+- Headline: "Seu próximo investimento no campo pode custar muito menos."
+- Subheadline: até 20% OFF e 10x sem juros no cartão.
+- Parágrafo de apelo comercial.
+- CTA primário: "QUERO FALAR COM UM CONSULTOR NO WHATSAPP".
 
-### 3. Vitrine de Ofertas
-- Apresentação dos 5 implementos enviados em cards ou tabela visual, com:
-  - Nome do implemento
-  - Preço "de" tachado
-  - Preço promocional em destaque
-- Layout em grade responsiva (mobile 1 coluna, desktop 2-3 colunas).
-- **Carrossel de criativos:** cada produto pode exibir imagens/criativos já prontos, com navegação por setas ou dots quando houver múltiplos ativos por produto.
+### 3. Carrossel de criativos
+Carrossel com os criativos prontos enviados (subsolador Baldan, pulverizador Maxx Wind 450, escarificador São José Ripper 11), navegação por setas + dots, autoplay suave, responsivo.
 
-### Lista de produtos confirmada
+### 4. Vitrine de ofertas
+Lista das 5 ofertas em cards escuros, com preço "de" tachado e preço promocional em vermelho grande:
+
 | Implemento | De | Por |
 |---|---|---|
 | Subsolador Baldan ASDADR 07/07 (Disco e Rolo) | R$ 56.000,00 | R$ 49.792,99 |
@@ -32,34 +37,26 @@ Criar uma landing page de bloco único para qualificar leads vindos do Meta ante
 | Pulverizador Maxxforte Maxx Wind 450 + Kit Herbicida | R$ 33.880,00 | R$ 30.315,79 |
 | Escarificador São José Ripper 11 (Discos e Rolo) | R$ 119.650,00 | R$ 112.799,86 |
 
-> **Dúvida a confirmar:** o usuário mencionou inicialmente "nove" produtos, mas enviou 5. Verificar se serão incluídos mais 4 produtos ou se o número final é 5.
+Selo "10x sem juros" em cada card.
 
-### 4. CTA secundário
-- Repetir o botão "QUERO FALAR COM UM CONSULTOR NO WHATSAPP" abaixo da vitrine.
-- Linha de reforço: "Clique no botão para consultar disponibilidade de estoque e garantir sua condição exclusiva."
+### 5. CTA secundário
+Mesmo botão de WhatsApp, com a linha "Clique no botão para consultar disponibilidade de estoque e garantir sua condição exclusiva."
 
-### 5. Rodapé legal
-- Textos obrigatórios:
-  - *Valores sob consulta.
-  - *Frete não incluso.
-  - Condições válidas enquanto durar o estoque.
-  - Parcelamento em até 10x sem juros no cartão de crédito.
-- Logo/assinatura: A9 Máquinas Agrícolas | Concessionária Massey Ferguson.
+### 6. Rodapé legal
+Valores sob consulta · Frete não incluso · Condições válidas enquanto durar o estoque · Parcelamento em até 10x sem juros no cartão de crédito. Assinatura: A9 Máquinas Agrícolas | Concessionária Massey Ferguson.
 
-## Identidade visual
-- Paleta baseada nos criativos enviados, com o **vermelho da marca** e **preto** como cores de destaque.
-- Tipografia clean, legível em mobile, com hierarquia forte entre headline e preços.
-- Botão de CTA em vermelho/preto com alto contraste para maximizar conversão.
-- Imagens dos criativos nos cards, mantendo a identidade visual da campanha.
+## Detalhes técnicos
 
-## Tecnologia e implementação
-- TanStack Start + React + Tailwind CSS v4.
-- Componente de carrossel leve (shadcn/ui Carousel ou embla-carousel-react) para os criativos dos produtos.
-- Links do WhatsApp podem usar mensagem pré-preenchida com a oferta.
-- Página única, sem navegação interna, 100% responsiva.
+- Página única em `src/routes/index.tsx`, sem backend.
+- Imagens enviadas publicadas via Lovable Assets (CDN) e referenciadas por pointer JSON.
+- Carrossel com `embla-carousel-react` (shadcn Carousel).
+- Tokens de cor da campanha adicionados em `src/styles.css` (preto, vermelho Massey, dourado, verde) — nada hardcoded nos componentes.
+- Botões de WhatsApp com `https://wa.me/<numero>?text=<mensagem pré-preenchida>`.
+- SEO: title, description e og tags próprios da campanha.
+- Mobile-first, já que o tráfego vem do Meta.
 
-## Próximos passos pendentes
-1. Receber os criativos/images dos produtos.
-2. Receber o logo da campanha e o logo da marca.
-3. Confirmar se o total de produtos será 5 ou 9.
-4. Confirmar número/link do WhatsApp dos consultores.
+## Pendências para fechar antes de publicar
+
+1. **Número do WhatsApp** do consultor (com DDD) — sem ele o botão fica com link placeholder.
+2. **Criativos dos dois Cortadores de Soqueira DROP CS 600L e CS 900L** — ainda não enviados; esses dois entram na vitrine sem imagem no carrossel.
+3. Confirmar se há mais produtos além dos 5 listados.
