@@ -1,10 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { BadgePercent, CreditCard, ShieldCheck } from "lucide-react";
 import logoFestival from "@/assets/logo-festival.png.asset.json";
-import logoMarca from "@/assets/massey-a9.png.asset.json";
+import logoMarca from "@/assets/logo-a9-branco.png.asset.json";
 import { CtaWhatsapp } from "@/components/CtaWhatsapp";
 import { CarrosselCriativos } from "@/components/CarrosselCriativos";
-import { VitrineOfertas } from "@/components/VitrineOfertas";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -38,7 +37,7 @@ function LandingPage() {
   return (
     <div className="min-h-screen bg-background">
       {/* Cabeçalho */}
-      <header className="border-b-2 border-brand bg-plate">
+      <header className="border-b-2 border-brand bg-background">
         <div className="mx-auto flex max-w-6xl items-center justify-center px-5 py-3">
           <img
             src={logoMarca.url}
@@ -99,22 +98,9 @@ function LandingPage() {
         <section className="border-b border-border bg-ink py-12 sm:py-16">
           <div className="mx-auto max-w-6xl px-5">
             <h2 className="mb-8 text-center text-3xl text-foreground sm:text-4xl">
-              As ofertas do <span className="text-gold">festival</span>
+              Algumas de <span className="text-gold">nossas ofertas</span>
             </h2>
             <CarrosselCriativos />
-          </div>
-        </section>
-
-        {/* Vitrine */}
-        <section className="py-12 sm:py-16">
-          <div className="mx-auto max-w-6xl px-5">
-            <h2 className="text-3xl text-foreground sm:text-4xl">
-              Implementos em oferta
-            </h2>
-            <p className="mt-2 mb-8 text-sm font-semibold uppercase tracking-wide text-muted-foreground">
-              Condições exclusivas enquanto durar o estoque
-            </p>
-            <VitrineOfertas />
           </div>
         </section>
 
@@ -138,13 +124,11 @@ function LandingPage() {
       {/* Rodapé */}
       <footer className="bg-ink py-10">
         <div className="mx-auto max-w-4xl px-5 text-center">
-          <div className="inline-block bg-plate px-6 py-3">
-            <img
-              src={logoMarca.url}
-              alt="A9 Máquinas Agrícolas — Concessionária Massey Ferguson"
-              className="h-10 w-auto"
-            />
-          </div>
+          <img
+            src={logoMarca.url}
+            alt="A9 Máquinas Agrícolas — Concessionária Massey Ferguson"
+            className="mx-auto h-10 w-auto"
+          />
           <p className="mt-6 text-xs leading-relaxed text-muted-foreground">
             *Valores sob consulta. *Frete não incluso. Condições válidas enquanto durar o estoque.
             Parcelamento em até 10x sem juros no cartão de crédito.
