@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { BadgePercent, CreditCard, ShieldCheck } from "lucide-react";
 import logoFestival from "@/assets/logo-festival.png.asset.json";
-import logoMarca from "@/assets/logo-a9-branco-processed.png.asset.json";
+import logoMarca from "@/assets/logo-a9-branco-cropped.png.asset.json";
 import { CtaWhatsapp } from "@/components/CtaWhatsapp";
 import { CarrosselCriativos } from "@/components/CarrosselCriativos";
 
