@@ -138,11 +138,13 @@ function LandingPage() {
       {/* Rodapé */}
       <footer className="bg-ink py-10">
         <div className="mx-auto max-w-4xl px-5 text-center">
-          <img
-            src={logoMarca.url}
-            alt="A9 Máquinas Agrícolas — Concessionária Massey Ferguson"
-            className="mx-auto h-9 w-auto"
-          />
+          <div className="inline-block bg-plate px-6 py-3">
+            <img
+              src={logoMarca.url}
+              alt="A9 Máquinas Agrícolas — Concessionária Massey Ferguson"
+              className="h-10 w-auto"
+            />
+          </div>
           <p className="mt-6 text-xs leading-relaxed text-muted-foreground">
             *Valores sob consulta. *Frete não incluso. Condições válidas enquanto durar o estoque.
             Parcelamento em até 10x sem juros no cartão de crédito.
