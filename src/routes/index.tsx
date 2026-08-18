@@ -38,7 +38,7 @@ function LandingPage() {
   return (
     <div className="min-h-screen bg-background">
       {/* Cabeçalho */}
-      <header className="border-b-2 border-brand bg-white">
+      <header className="border-b-2 border-brand bg-plate">
         <div className="mx-auto flex max-w-6xl items-center justify-center px-5 py-3">
           <img
             src={logoMarca.url}
