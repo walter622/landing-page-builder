@@ -1,9 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { BadgePercent, CreditCard, ShieldCheck } from "lucide-react";
 import logoFestival from "@/assets/logo-festival.png.asset.json";
-import logoMarca from "@/assets/logo-a9-branco-cropped.png.asset.json";
+import logoMarca from "@/assets/logo-a9-branco-transp.png.asset.json";
 import { CtaWhatsapp } from "@/components/CtaWhatsapp";
 import { CarrosselCriativos } from "@/components/CarrosselCriativos";
+import { WhatsappFlutuante } from "@/components/WhatsappFlutuante";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -37,12 +38,12 @@ function LandingPage() {
   return (
     <div className="min-h-screen bg-background">
       {/* Cabeçalho */}
-      <header className="border-b-2 border-brand bg-background">
-        <div className="mx-auto flex max-w-6xl items-center justify-center px-5 py-3">
+      <header className="bg-background">
+        <div className="mx-auto flex max-w-6xl items-center justify-center px-5 py-5">
           <img
             src={logoMarca.url}
             alt="A9 Máquinas Agrícolas — Concessionária Massey Ferguson"
-            className="h-12 w-auto sm:h-14"
+            className="h-20 w-auto sm:h-24"
           />
         </div>
       </header>
@@ -127,7 +128,7 @@ function LandingPage() {
           <img
             src={logoMarca.url}
             alt="A9 Máquinas Agrícolas — Concessionária Massey Ferguson"
-            className="mx-auto h-10 w-auto"
+            className="mx-auto h-16 w-auto"
           />
           <p className="mt-6 text-xs leading-relaxed text-muted-foreground">
             *Valores sob consulta. *Frete não incluso. Condições válidas enquanto durar o estoque.
