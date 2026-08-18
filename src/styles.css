@@ -26,6 +26,8 @@
   --color-gold: var(--gold);
   --color-gold-soft: var(--gold-soft);
   --color-signal: var(--signal);
+  --color-whatsapp: var(--whatsapp);
+  --color-whatsapp-foreground: var(--whatsapp-foreground);
   --color-ink: var(--ink);
   --color-ink-soft: var(--ink-soft);
   --color-plate: var(--plate);
@@ -95,6 +97,10 @@
   /* Verde de economia */
   --signal: oklch(0.72 0.2 145);
 
+  /* Verde WhatsApp */
+  --whatsapp: oklch(0.48 0.16 148);
+  --whatsapp-foreground: oklch(0.99 0 0);
+
   --ink: oklch(0.12 0 0);
   --ink-soft: oklch(0.28 0.004 260);
   --plate: oklch(1 0 0);
@@ -158,6 +164,31 @@
 
 @utility diagonal-band {
   clip-path: polygon(0 0, 100% 0, calc(100% - 1.75rem) 100%, 0 100%);
+}
+
+@keyframes pulse-cta-ring {
+  0% {
+    box-shadow: 0 0 0 0 color-mix(in oklab, var(--color-whatsapp) 65%, transparent);
+    transform: scale(1);
+  }
+  70% {
+    box-shadow: 0 0 0 18px color-mix(in oklab, var(--color-whatsapp) 0%, transparent);
+    transform: scale(1.03);
+  }
+  100% {
+    box-shadow: 0 0 0 0 color-mix(in oklab, var(--color-whatsapp) 0%, transparent);
+    transform: scale(1);
+  }
+}
+
+@utility pulse-cta {
+  animation: pulse-cta-ring 2s ease-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pulse-cta {
+    animation: none;
+  }
 }
 
 @utility grain-dark {
