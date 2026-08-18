@@ -17,11 +17,11 @@ export function CtaWhatsapp({
       target="_blank"
       rel="noopener noreferrer"
       className={cn(
-        "pulse-cta group inline-flex w-full items-center justify-center gap-3 rounded-full bg-whatsapp px-6 py-5 text-center font-display text-xl font-extrabold uppercase italic tracking-tight text-whatsapp-foreground transition-all hover:brightness-110 active:translate-y-0.5 sm:w-auto sm:px-10 sm:text-2xl",
+        "pulse-cta group inline-flex w-full items-center justify-center gap-2 whitespace-nowrap rounded-full bg-whatsapp px-4 py-4 text-center font-display text-base font-extrabold uppercase italic tracking-tight text-whatsapp-foreground transition-all hover:brightness-110 active:translate-y-0.5 sm:w-auto sm:gap-3 sm:px-10 sm:py-5 sm:text-2xl",
         className,
       )}
     >
-      <MessageCircle className="size-6 shrink-0" strokeWidth={2.5} />
+      <MessageCircle className="size-5 shrink-0 sm:size-6" strokeWidth={2.5} />
       <span>{label}</span>
     </a>
   );
