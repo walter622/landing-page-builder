@@ -54,8 +54,8 @@ export const criativos = [
   { url: criativoEscarificador.url, alt: "Escarificador São José Ripper 11 em oferta no Festival de Implementos A9" },
 ];
 
-// Atualize com o número real do consultor (formato internacional, somente dígitos).
-export const WHATSAPP_NUMERO = "5500000000000";
+// Número do consultor A9 (formato internacional, somente dígitos).
+export const WHATSAPP_NUMERO = "551155551346";
 
 export const whatsappLink = (contexto?: string) => {
   const msg = contexto
