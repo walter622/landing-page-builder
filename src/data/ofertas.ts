@@ -1,6 +1,6 @@
-import criativoSubsolador from "@/assets/criativo-subsolador.png.asset.json";
-import criativoPulverizador from "@/assets/criativo-pulverizador.png.asset.json";
-import criativoEscarificador from "@/assets/criativo-escarificador.png.asset.json";
+import criativoSubsolador from "@/assets/criativo-subsolador.png";
+import criativoPulverizador from "@/assets/criativo-pulverizador.png";
+import criativoEscarificador from "@/assets/criativo-escarificador.png";
 
 export type Oferta = {
   nome: string;
@@ -49,9 +49,9 @@ export const ofertas: Oferta[] = [
 ];
 
 export const criativos = [
-  { url: criativoSubsolador.url, alt: "Subsolador Baldan ASDADR 07/07 em oferta no Festival de Implementos A9" },
-  { url: criativoPulverizador.url, alt: "Pulverizador Maxxforte Maxx Wind 450 em oferta no Festival de Implementos A9" },
-  { url: criativoEscarificador.url, alt: "Escarificador São José Ripper 11 em oferta no Festival de Implementos A9" },
+  { url: criativoSubsolador, alt: "Subsolador Baldan ASDADR 07/07 em oferta no Festival de Implementos A9" },
+  { url: criativoPulverizador, alt: "Pulverizador Maxxforte Maxx Wind 450 em oferta no Festival de Implementos A9" },
+  { url: criativoEscarificador, alt: "Escarificador São José Ripper 11 em oferta no Festival de Implementos A9" },
 ];
 
 // Número do consultor A9 (formato internacional, somente dígitos).

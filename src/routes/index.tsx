@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { BadgePercent, CreditCard, ShieldCheck } from "lucide-react";
-import logoFestival from "@/assets/logo-festival.png.asset.json";
-import logoMarca from "@/assets/logo-a9-branco-transp.png.asset.json";
+import logoFestival from "@/assets/logo-festival.png";
+import logoMarca from "@/assets/logo-a9-branco-transp.png";
 import { CtaWhatsapp } from "@/components/CtaWhatsapp";
 import { CarrosselCriativos } from "@/components/CarrosselCriativos";
 import { WhatsappFlutuante } from "@/components/WhatsappFlutuante";
@@ -41,7 +41,7 @@ function LandingPage() {
       <header className="bg-background">
         <div className="mx-auto flex max-w-6xl items-center justify-center px-5 py-5">
           <img
-            src={logoMarca.url}
+            src={logoMarca}
             alt="A9 Máquinas Agrícolas — Concessionária Massey Ferguson"
             className="h-10 w-auto sm:h-12"
           />
@@ -53,7 +53,7 @@ function LandingPage() {
         <section className="grain-dark relative overflow-hidden border-b border-border">
           <div className="mx-auto max-w-4xl px-5 py-12 text-center sm:py-20">
             <img
-              src={logoFestival.url}
+              src={logoFestival}
               alt="Logo do Festival de Implementos A9"
               className="mx-auto mb-8 w-64 max-w-full sm:w-96"
             />
@@ -126,7 +126,7 @@ function LandingPage() {
       <footer className="bg-ink py-10">
         <div className="mx-auto max-w-4xl px-5 text-center">
           <img
-            src={logoMarca.url}
+            src={logoMarca}
             alt="A9 Máquinas Agrícolas — Concessionária Massey Ferguson"
             className="mx-auto h-10 w-auto sm:h-12"
           />
